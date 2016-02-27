@@ -2,7 +2,7 @@
 var
   // サーバー用ライブラリ `express` のロード
   express = require('express'),
-  // サーバーインスタンスの初期化  
+  // サーバーインスタンスの初期化
   app = express(),
   // 環境変数に `PORT` があればその値を、なければ 3000 を使用
   port = process.env.PORT || 3000,
@@ -57,52 +57,52 @@ app.delete('/api/dummies/:id', function (req, res, next) {
   * 基本 API 実装編
   *
   ***************************************/
-// GET /api/projects に対する処理を書く
-app.get('/api/projects', function (req, res, next) {
-  res.status(501).json("NotImplemented");
+// // GET /api/projects に対する処理を書く
+// app.get('/api/projects', function (req, res, next) {
+//   res.status(501).json("NotImplemented");
+//
+//   /**
+//     * projects テーブルから
+//     * 全てのデータを取得 (SELECT) する
+//     */
+//   return next();
+// });
+//
+// // GET /api/projects/:id に対する処理を書く
+// app.get('/api/projects/:id', function (req, res, next) {
+//   res.status(501).json("NotImplemented");
+//
+//   /**
+//     * projects テーブルから
+//     * パラメーターで受け取った id と一致するデータ (WHERE)
+//     * を取得 (SELECT) する
+//     *
+//     * 一致するデータがなかった場合の処理を忘れずに ;)
+//     */
+//   return next();
+// });
+//
+// // DELETE /api/projects/:id に対する処理を書く
+// app.delete('/api/projects/:id', function (req, res, next) {
+//   res.status(501).json("NotImplemented");
+//
+//   /**
+//     * projects テーブルから
+//     * パラメーターで受け取った id と一致するデータ (WHERE)
+//     * を取得 (SELECT) する
+//     *
+//     * 一致するデータがなかった場合の処理を忘れずに ;)
+//     */
+//   return next();
+// });
+//
+// // POST /api/projects に対する処理を書く
+// app.post('/api/projects', function (req, res, next) {
+//    res.status(501).json("NotImplemented");
+// });
 
-  /**
-    * projects テーブルから
-    * 全てのデータを取得 (SELECT) する
-    */
-  return next();
-});
 
-// GET /api/projects/:id に対する処理を書く
-app.get('/api/projects/:id', function (req, res, next) {
-  res.status(501).json("NotImplemented");
-
-  /**
-    * projects テーブルから
-    * パラメーターで受け取った id と一致するデータ (WHERE)
-    * を取得 (SELECT) する
-    *
-    * 一致するデータがなかった場合の処理を忘れずに ;)
-    */
-  return next();
-});
-
-// DELETE /api/projects/:id に対する処理を書く
-app.delete('/api/projects/:id', function (req, res, next) {
-  res.status(501).json("NotImplemented");
-
-  /**
-    * projects テーブルから
-    * パラメーターで受け取った id と一致するデータ (WHERE)
-    * を取得 (SELECT) する
-    *
-    * 一致するデータがなかった場合の処理を忘れずに ;)
-    */
-  return next();
-});
-
-// POST /api/projects に対する処理を書く
-app.post('/api/projects', function (req, res, next) {
-   res.status(501).json("NotImplemented");
-});
-
-
-/** 
+/**
   * Initialize database
   * This could work on multiple table definition also
   */
